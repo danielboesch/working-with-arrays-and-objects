@@ -23,19 +23,29 @@ var carDetails = {
 
 //Code Here
 
+const {color} = carDetails;
+const {make} = carDetails;
+const {model} = carDetails;
+const {year} = carDetails;
 
 
 ////////// PROBLEM 2 //////////
 
 /*
-  In the function below named greeting, it is receiving an object as a parameter. 
-  Use object destructuring to save the object properties to new variables. 
-  The property names are firstName, lastName, and title.
+In the function below named greeting, it is receiving an object as a parameter. 
+Use object destructuring to save the object properties to new variables. 
+The property names are firstName, lastName, and title.
 */
 
 function greeting( obj ) {
   //Code Here
   
+  const {firstName} = obj;
+  const {lastName} = obj;
+  const {title} = obj;
+
+
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -55,6 +65,22 @@ function greeting( obj ) {
 
 //Code Here
 
+function totalPopulation(obj){
+  
+  const {utah} = obj;
+  const {california} = obj;
+  const {texas} = obj;
+  const {arizona} = obj;
+
+
+let states = [utah, california, texas, arizona]
+
+
+let sumOfNums = states.reduce(function( acc, element){
+  return acc + element
+}, 0)
+return sumOfNums
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -68,6 +94,18 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+function ingredients(obj){
+  let {carb} = obj
+  let {fat} = obj
+  let {protein} = obj
+
+  let arr = [];
+
+  arr.push(carb, fat, protein)
+
+  return arr;
+}
 
 
 
@@ -87,6 +125,15 @@ function greeting( obj ) {
 
 //Code Here
 
+function largeNumbers( {first, second, third} ){
+  if (first < second && first < third){
+    return first
+  } if (second < first && second < third){
+    return second
+  } if (third < first && third < second){
+    return third
+  } 
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -100,3 +147,15 @@ function greeting( obj ) {
 //Code Here
 
 
+
+function numberGroups( {a, b, c} ){
+  
+  if (a.length > b.length && a.length > c.length){
+    return a
+  } if (b.length > a.length && b.length > c.length){
+    return b
+  } if (c.length > a.length && c.length > b.length){
+    return c
+  } 
+
+}
