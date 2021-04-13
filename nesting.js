@@ -52,6 +52,17 @@ var employees = [
 
 //Code Here
 
+function employeeUpdater(){
+  for (let key in employees){
+    if(employees[key]['firstName'] === 'Theo'){
+      console.log(employees)
+      delete employees[key]
+    }if (employees[key] === 'Lorie'){
+      employees.department = 'HR'
+  } 
+}
+return employees
+}
 
 
 ////////// PROBLEM 2 //////////
