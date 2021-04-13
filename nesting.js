@@ -52,17 +52,33 @@ var employees = [
 
 //Code Here
 
+
 function employeeUpdater(){
-  for (let key in employees){
-    if(employees[key]['firstName'] === 'Theo'){
-      console.log(employees)
-      delete employees[key]
-    }if (employees[key] === 'Lorie'){
-      employees.department = 'HR'
-  } 
+  employees.forEach((element, index, array) => {
+    element.firstName === 'Theo' && (employees.splice(index, 1))
+    element.firstName === 'Lorie' && (employees[index]['department'] = 'HR')
+  })
+  return employees
 }
-return employees
-}
+
+
+
+
+
+
+
+
+// function employeeUpdater(){
+//   for (let key in employees){
+//     if(employees[key]['firstName'] === 'Theo'){
+//       console.log(employees)
+//       delete employees[key]
+//     }if (employees[key] === 'Lorie'){
+//       employees.department = 'HR'
+//   } 
+// }
+// return employees
+// }
 
 
 ////////// PROBLEM 2 //////////
@@ -80,6 +96,8 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+
+
 
 
 
