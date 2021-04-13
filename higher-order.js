@@ -96,11 +96,11 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 //Code Here
-let myStrongest = monstersInYourPocket.filter(function(element, index, array) {
+let myStrongest = monstersInYourPocket.filter(function(monster, index, array) {
+  let over200 = [];
+  return monster.CP > 200
   
 })
-
-
 
 
 ////////// PROBLEM 5 //////////
@@ -116,15 +116,17 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
 */
 
-function orderTotals(){
-  return orders.map(order => order.price + (order.tax *order.price))
-}
+
+
+let orderTotals = orders.map(function(price, index ,array){
+  return price.price + (price.tax * price.price)
+});
 
 
 
-// let orderTotals = orders.map(function(prices, index ,array){
-//   return ((prices * 0.07) + prices)
-// });
+// function orderTotals(){
+  // return orders.map(order => order.price + (order.tax *order.price))
+// }
 
 
 ////////// PROBLEM 6 //////////
